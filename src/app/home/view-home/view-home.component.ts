@@ -22,21 +22,6 @@ export class ViewHomeComponent implements OnInit {
 
  
   ) { 
-<<<<<<< HEAD
-
-    // if(this.platform.is('android')){
-    //     App.exitApp()
-    // }
-=======
-    
-    // this.platform.backButton.subscribeWithPriority(-1, ()=>{
-    //   if (!this.routerOutlet.canGoBack()){
-    //     App.exitApp
-    //   }
-    // })
-    
->>>>>>> bf3c3daab90c621bfcdb0411523f8c5d2c7ba162
-
   }
 
 

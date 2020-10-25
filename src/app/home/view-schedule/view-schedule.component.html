@@ -1,0 +1,73 @@
+<app-side-bar></app-side-bar>
+<div class="ion-page" id="main-content">
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <img src="/assets/img/ftbnav.png" style="margin-top: 5px;">
+    </ion-toolbar>
+  </ion-header>
+
+  
+  <ion-content class="ion-padding">
+    <div >
+      <ion-item lines="none">
+        <ion-buttons slot="start" style="margin-left: -20px; margin-right: 4px;"> 
+          <ion-back-button defaultHref="home" icon="chevron-back"></ion-back-button>
+         </ion-buttons>
+          
+      <h4>English Premier League</h4>
+      </ion-item>
+    </div>
+    <ion-card *ngFor="let footsched of fschedule" >
+      <ion-card-content></ion-card-content>
+      
+      <ion-card-header class="background" >
+        
+        <h1 style="visibility: hidden;">                    Football</h1>
+        
+        <ion-card-title>
+        <ion-grid style="margin-left: 15px;">
+          <ion-row>
+            <ion-col>
+              <h5 style="background-color: white; padding: 3px; text-align: center; border-radius: 10px;" class="m-0">{{footsched.strEvent}}</h5>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <h6>When: {{ footsched.dateEvent }}</h6>
+        <h6>Time:{{ footsched.strTime }}</h6>
+        <h6>Where: {{ footsched.strVenue }}</h6>
+
+</ion-card-content>
+    </ion-card>
+  </ion-content>
+</div>
+
+<ion-footer class="ion-no-border">
+  <ion-grid class="ion-no-border" >
+    <ion-row>
+      <ion-col>
+     
+      </ion-col>
+      <ion-col>
+ 
+      </ion-col>
+      <ion-col>
+ 
+       <ion-button (click)="myExit()" >
+         <ion-icon name="exit-outline"></ion-icon>
+         <ion-label>Exit</ion-label>
+       </ion-button>
+ 
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+     
+  
+ </ion-footer>
+
+<!-- <h5 style="margin-left: 35px; background-color: white; margin-right: 50px; size: 10px;">{{footsched.strHomeTeam}}</h5> -->

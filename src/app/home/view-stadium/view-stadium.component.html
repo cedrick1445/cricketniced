@@ -1,0 +1,76 @@
+<app-side-bar></app-side-bar>
+<div class="ion-page" id="main-content">
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+     <img src="/assets/img/ftbnav.png" style="margin-top: 5px;">
+    </ion-toolbar>
+  </ion-header>
+  <ion-content *ngIf="fteams">
+    <div >
+      <ion-item lines="none">
+        <ion-buttons slot="start" style="margin-left: -20px; margin-right: 4px;"> 
+          <ion-back-button defaultHref="home" icon="chevron-back"></ion-back-button>
+         </ion-buttons>
+        <ion-avatar slot="start">
+       <img src="{{fteams[0].strTeamBadge}}">
+      </ion-avatar>  
+      <h1>{{fteams[0].strStadium}}</h1>
+      </ion-item>
+    </div>
+    <ion-grid>
+      <ion-row class="ion-justify-content-start">
+        <ion-col>
+          <div>
+            <h6>Stadium Location:</h6>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+            <h6>{{fteams[0].strStadiumLocation}}</h6>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-justify-content-start">
+        <ion-col>
+          <div>
+            <h6>Capacity</h6>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+            <h6>{{fteams[0].intStadiumCapacity}}</h6>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-card>
+      <img src="{{fteams[0].strStadiumThumb}}">
+      <ion-label><h6 style="margin: 5px;" >{{fteams[0].strStadiumDescription}}</h6></ion-label></ion-card>
+    </ion-content>
+
+    <ion-footer>
+      <ion-toolbar>
+        <ion-tabs>
+          <ion-tab-bar>
+            <ion-tab-button *ngFor="let football of fteams" [routerLink]="['/home/team/'+football.idTeam]"> 
+              <ion-icon name="football-outline"></ion-icon>
+              <ion-label>Team</ion-label>
+            </ion-tab-button>
+            <ion-tab-button *ngFor="let football of fteams" [routerLink]="['/home/stadium/'+football.idTeam]">
+              <ion-icon name="tablet-landscape-outline"></ion-icon> 
+              <ion-label>Stadium</ion-label>
+            </ion-tab-button>
+            <ion-tab-button *ngIf="fteams" [routerLink]="['/home/standing']" (click)="loadmokoteam()">
+              <ion-icon name="podium-outline"></ion-icon>
+              <ion-label>Standing</ion-label>
+            </ion-tab-button>
+          </ion-tab-bar>
+        </ion-tabs>
+      </ion-toolbar>
+    </ion-footer>
+
+
+ 

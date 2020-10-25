@@ -1,0 +1,203 @@
+<app-side-bar></app-side-bar>
+<div class="ion-page" id="main-content">
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+     <img src="/assets/img/ftbnav.png" style="margin-top: 5px;">
+    </ion-toolbar>
+  </ion-header>
+
+
+<ion-content>
+  
+  <ion-grid style="margin: 26px; background-color: white;">
+    <ion-row>
+      <ion-col class="table-responsive">
+        <table class="table">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Team</th>
+              <th scope="col">Played</th>
+              <th scope="col">Goal Difference</th>
+              <th scope="col">Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Everton</td>
+              <td>5</td>
+              <td>7</td>
+              <td>13</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Aston Villa</td>
+              <td>4</td>
+              <td>10</td>
+              <td>12</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Liverpool</td>
+              <td>5</td>
+              <td>0</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>Leicester City</td>
+              <td>5</td>
+              <td>4</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td>Arsenal</td>
+              <td>5</td>
+              <td>2</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <th scope="row">6</th>
+              <td>Wolves</td>
+              <td>5</td>
+              <td>-2</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <th scope="row">7</th>
+              <td>Tottenham</td>
+              <td>5</td>
+              <td>7</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <th scope="row">8</th>
+              <td>Chelsea</td>
+              <td>5</td>
+              <td>4</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <th scope="row">9</th>
+              <td>West Ham United</td>
+              <td>5</td>
+              <td>4</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <th scope="row">10</th>
+              <td>Leeds United</td>
+              <td>5</td>
+              <td>0</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <th scope="row">11</th>
+              <td>Southampton</td>
+              <td>5</td>
+              <td>-1</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <th scope="row">12</th>
+              <td>Newcastle United</td>
+              <td>5</td>
+              <td>-2</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <th scope="row">13</th>
+              <td>Crystal Palace</td>
+              <td>5</td>
+              <td>-2</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <th scope="row">14</th>
+              <td>Mancherster United</td>
+              <td>4</td>
+              <td>-3</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <th scope="row">15</th>
+              <td>Brighton</td>
+              <td>5</td>
+              <td>-2</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <th scope="row">16</th>
+              <td>West Ham</td>
+              <td>5</td>
+              <td>-8</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <th scope="row">17</th>
+              <td>Burnley</td>
+              <td>4</td>
+              <td>-5</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <th scope="row">18</th>
+              <td>Sheffield United</td>
+              <td>5</td>
+              <td>-5</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <th scope="row">19</th>
+              <td>Fulham</td>
+              <td>5</td>
+              <td>-8</td>
+              <td>1</td>
+            </tr>
+          </tbody>
+        </table>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<div>
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar>
+        <ion-tab-button routerLink="/home" (click)="loadmokoteam()"> 
+          <ion-icon name="home-outline"></ion-icon>
+          <ion-label>Home</ion-label>
+        </ion-tab-button>
+        <ion-tab-button disabled>
+          <ion-icon name="add-outline"></ion-icon> 
+          <ion-label></ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button  (click)="loadmokoteam()">
+          <ion-icon name="podium-outline"></ion-icon>
+          <ion-label>Standing</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>
+</div>
+</div>
+
+
+
+  <!-- <ion-segment (ionChange)="segmentChanged($event)">
+        <ion-segment-button value="friends">
+          <ion-label>Friends</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="enemies">
+          <ion-label>Enemies</ion-label>
+        </ion-segment-button>
+      </ion-segment> -->

@@ -1,0 +1,73 @@
+<app-side-bar></app-side-bar>
+<div class="ion-page" id="main-content">
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+     <img src="/assets/img/ftbnav.png" style="margin-top: 5px;">
+    </ion-toolbar>
+  
+  </ion-header>
+  <ion-content *ngIf="fteams && isLoading">
+    <div >
+     <img src="{{fteams[0].strTeamBanner}}">
+
+      <ion-item lines="none">
+     <ion-buttons slot="start" style="margin-left: -20px; margin-right: 4px;"> 
+      <ion-back-button defaultHref="home" icon="chevron-back"></ion-back-button>
+     </ion-buttons>
+        <ion-avatar >
+       <img src="{{fteams[0].strTeamBadge}}">
+      </ion-avatar>  
+    <h1 style="margin-left: 10px;">{{fteams[0].strTeam}}</h1> 
+      </ion-item>
+    </div>
+    <ion-card>
+      <img src="{{fteams[0].strTeamFanart3}}">
+      <ion-label>
+        <h6 style="margin: 5px;" >
+          {{fteams[0].strDescriptionEN}}
+        </h6>
+        <img src="{{fteams[0].strTeamFanart4}}">
+      </ion-label>
+    </ion-card>
+     
+    </ion-content>
+    <ion-footer>
+      <ion-toolbar>
+      
+        <ion-tabs>
+          <ion-tab-bar>
+            <ion-tab-button *ngFor="let football of fteams" [routerLink]="['/home/team/'+football.idTeam]" (click)="loadmokoteam()"> 
+              <ion-icon name="football-outline"></ion-icon>
+              <ion-label>Team</ion-label>  
+            </ion-tab-button>
+            <ion-tab-button *ngFor="let football of fteams" [routerLink]="['/home/stadium/'+football.idTeam]" (click)="loadmokoteam()">
+              <ion-icon name="tablet-landscape-outline"></ion-icon> 
+              <ion-label>Stadium</ion-label>
+            </ion-tab-button>
+            <ion-tab-button [routerLink]="['/home/standing']" (click)="loadmokoteam()">
+              <ion-icon name="podium-outline"></ion-icon>
+              <ion-label>Standing</ion-label>
+            </ion-tab-button>
+            
+          </ion-tab-bar>
+          
+        </ion-tabs>
+      </ion-toolbar>
+    </ion-footer>
+    </div>
+
+<!-- <ng-template #elseBlock>Content to render when condition is false.</ng-template> -->
+   <!-- <ion-segment (ionChange)="segmentChanged($event)">
+          <ion-segment-button value="friends">
+            <ion-label>Friends</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="enemies">
+            <ion-label>Enemies</ion-label>
+          </ion-segment-button>
+        </ion-segment> -->
+
+
+      

@@ -1,0 +1,75 @@
+<app-side-bar></app-side-bar>
+<div class="ion-page" id="main-content">
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+     <img src="/assets/img/ftbnav.png" style="margin-top: 5px;">
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="ion-padding" >
+    
+    <ion-card *ngFor="let football of fteams" [routerLink]="['team/'+football.idTeam]">
+      <ion-card-header >
+        
+        <img src="{{ football.strTeamFanart1}}" >
+       <ion-card-title>
+        <ion-item lines="none">
+          <ion-avatar slot="start">
+         <img src="{{football.strTeamBadge}}">
+        </ion-avatar>
+        <h2>{{football.strTeam}}</h2>
+        </ion-item>
+       </ion-card-title>
+     </ion-card-header>
+      <ion-card-content  >
+ 
+         <p> {{ football.strAlternate }} </p>
+         <p>{{ football.strKeywords}}
+
+          <ion-buttons style="float: right; color: red;" >
+            <ion-button >
+              <ion-icon name="caret-forward-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+         </p>
+         
+         <!-- <p *ngIf="football.strGender == ''; else elseBlock ">Ay tite</p> -->
+      </ion-card-content>
+      
+     </ion-card>
+   
+  </ion-content>
+  
+</div>
+
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> bf3c3daab90c621bfcdb0411523f8c5d2c7ba162
+<!-- <ng-template #elseBlock>Content to render when condition is false.</ng-template> -->
+<ion-footer class="ion-no-border">
+ <ion-grid class="ion-no-border" >
+   <ion-row>
+     <ion-col>
+    
+     </ion-col>
+     <ion-col>
+
+     </ion-col>
+     <ion-col>
+
+      <ion-button (click)="myExit()" >
+        <ion-icon name="exit-outline"></ion-icon>
+        <ion-label>Exit</ion-label>
+      </ion-button>
+
+     </ion-col>
+   </ion-row>
+ </ion-grid>
+    
+ 
+</ion-footer>

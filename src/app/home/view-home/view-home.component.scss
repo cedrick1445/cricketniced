@@ -1,0 +1,12 @@
+ion-header {
+    .toolbar-container{
+        // background: #65615a;
+        padding: 10px;
+    }
+}
+ion-content{
+    --background:#E1E5F2
+}
+ion-tab-bar.my-custom-tab-bar {
+    --background: rgba(100,100,100,0.1);
+  }
